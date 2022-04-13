@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Apr  7 10:09:47 2022
+# Process ID: 15832
+# Current directory: E:/2-lab2/2-lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27200 E:\2-lab2\2-lab1\2-lab1.xpr
+# Log file: E:/2-lab2/2-lab1/vivado.log
+# Journal file: E:/2-lab2/2-lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/2-lab2/2-lab1/2-lab1.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/2-lab2/2-lab1/2-lab1.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

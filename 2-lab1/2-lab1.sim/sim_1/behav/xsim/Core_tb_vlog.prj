@@ -1,0 +1,40 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../2-lab1.srcs/sources_1/imports/src" --include "D:/1vivado/Vivado/2017.4/data/xilinx_vip/include" \
+"../../../../2-lab1.srcs/sources_1/ip/BRAM2/sim/BRAM2.v" \
+"../../../../2-lab1.srcs/sources_1/ip/BRAM/sim/BRAM.v" \
+"../../../../2-lab1.srcs/sources_1/new/Bextend.v" \
+"../../../../2-lab1.srcs/sources_1/new/CSR.v" \
+"../../../../2-lab1.srcs/sources_1/new/Cache.v" \
+"../../../../2-lab1.srcs/sources_1/imports/src/Control.v" \
+"../../../../2-lab1.srcs/sources_1/imports/src/Core.v" \
+"../../../../2-lab1.srcs/sources_1/imports/new/EX_MEM.v" \
+"../../../../2-lab1.srcs/sources_1/new/Extend.v" \
+"../../../../2-lab1.srcs/sources_1/new/ForwardingControl.v" \
+"../../../../2-lab1.srcs/sources_1/new/ID_EX.v" \
+"../../../../2-lab1.srcs/sources_1/new/IF.v" \
+"../../../../2-lab1.srcs/sources_1/new/IF_ID.v" \
+"../../../../2-lab1.srcs/sources_1/new/I_Cache.v" \
+"../../../../2-lab1.srcs/sources_1/new/Iextend.v" \
+"../../../../2-lab1.srcs/sources_1/new/Jextend.v" \
+"../../../../2-lab1.srcs/sources_1/imports/lab2/LatencyMemory.v" \
+"../../../../2-lab1.srcs/sources_1/new/MEM_WB.v" \
+"../../../../2-lab1.srcs/sources_1/new/Regs.v" \
+"../../../../2-lab1.srcs/sources_1/imports/src/SCPU.v" \
+"../../../../2-lab1.srcs/sources_1/new/Sextend.v" \
+"../../../../2-lab1.srcs/sources_1/new/Uextend.v" \
+"../../../../2-lab1.srcs/sources_1/new/alu1.v" \
+"../../../../2-lab1.srcs/sources_1/new/iLatencyMemory.v" \
+"../../../../2-lab1.srcs/sources_1/new/mem_valid_sig.v" \
+"../../../../2-lab1.srcs/sources_1/new/mux2.v" \
+"../../../../2-lab1.srcs/sources_1/new/mux3.v" \
+"../../../../2-lab1.srcs/sources_1/new/stallControl.v" \
+"../../../../2-lab1.srcs/sources_1/new/trans_addrCSR.v" \
+
+sv xil_defaultlib  --include "../../../../2-lab1.srcs/sources_1/imports/src" --include "D:/1vivado/Vivado/2017.4/data/xilinx_vip/include" \
+"../../../../2-lab1.srcs/sim_1/imports/test_bench/Core_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

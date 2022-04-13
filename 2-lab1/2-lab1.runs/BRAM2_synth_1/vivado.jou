@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Apr  4 10:23:46 2022
+# Process ID: 10164
+# Current directory: E:/2-lab2/2-lab1/2-lab1.runs/BRAM2_synth_1
+# Command line: vivado.exe -log BRAM2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BRAM2.tcl
+# Log file: E:/2-lab2/2-lab1/2-lab1.runs/BRAM2_synth_1/BRAM2.vds
+# Journal file: E:/2-lab2/2-lab1/2-lab1.runs/BRAM2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source BRAM2.tcl -notrace

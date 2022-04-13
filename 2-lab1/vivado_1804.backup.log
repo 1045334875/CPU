@@ -1,0 +1,1216 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Apr  3 13:08:44 2022
+# Process ID: 1804
+# Current directory: I:/2-lab2/2-lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14492 I:\2-lab2\2-lab1\2-lab1.xpr
+# Log file: I:/2-lab2/2-lab1/vivado.log
+# Journal file: I:/2-lab2/2-lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project I:/2-lab2/2-lab1/2-lab1.xpr
+INFO: [Project 1-313] Project file moved from 'D:/1vivado/2-lab1' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'I:/computer_system/sys3/build/kernel.coe', nor could it be found using path 'D:/computer_system/sys3/build/kernel.coe'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'I:/computer_system/sys3/lab0/build/kernel.coe', nor could it be found using path 'D:/computer_system/sys3/lab0/build/kernel.coe'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'I:/computer_system/sys3/sys3lab-2022-stu/src/lab2/lab2.coe', nor could it be found using path 'D:/computer_system/sys3/sys3lab-2022-stu/src/lab2/lab2.coe'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'H:/anzhuang3/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 772.668 ; gain = 107.219
+update_compile_order -fileset sources_1
+generate_target Simulation [get_files I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/BRAM2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BRAM2'...
+ERROR: [Ipptcl 7-519] NULL COE Data pointer: Unable to open the file 
+ERROR: [Common 17-39] 'ipgui::get_coe_val' failed due to earlier errors.
+CRITICAL WARNING: [IP_Flow 19-1747] Failed to deliver file 'h:/anzhuang3/Vivado/2017.4/data/ip/xilinx/blk_mem_gen_v8_4/hdl/mem_init_file.xit': ERROR: [Common 17-39] 'ipgui::get_coe_val' failed due to earlier errors.
+
+ERROR: [IP_Flow 19-167] Failed to deliver one or more file(s).
+ERROR: [IP_Flow 19-3505] IP Generation error: Failed to generate IP 'BRAM2'. Failed to generate 'Vivado Verilog Simulation' outputs: 
+ERROR: [IP_Flow 19-98] Generation of the IP CORE failed.
+Failed to generate IP 'BRAM2'. Failed to generate 'Vivado Verilog Simulation' outputs: 
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Coe_File {I:/second/sys3lab-2022-stu-master/src/lab2/lab2.coe}] [get_ips BRAM2]
+INFO: [IP_Flow 19-3484] Absolute path of file 'i:/second/sys3lab-2022-stu-master/src/lab2/lab2.coe' provided. It will be converted relative to IP Instance files '../../../../../../second/sys3lab-2022-stu-master/src/lab2/lab2.coe'
+generate_target all [get_files  I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/BRAM2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BRAM2'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BRAM2'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BRAM2'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BRAM2'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BRAM2'...
+catch { config_ip_cache -export [get_ips -all BRAM2] }
+export_ip_user_files -of_objects [get_files I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/BRAM2.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/BRAM2.xci]
+create_ip_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1050.867 ; gain = 0.000
+launch_runs -jobs 8 BRAM2_synth_1
+[Sun Apr  3 13:24:20 2022] Launched BRAM2_synth_1...
+Run output will be captured here: I:/2-lab2/2-lab1/2-lab1.runs/BRAM2_synth_1/runme.log
+export_simulation -of_objects [get_files I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/BRAM2.xci] -directory I:/2-lab2/2-lab1/2-lab1.ip_user_files/sim_scripts -ip_user_files_dir I:/2-lab2/2-lab1/2-lab1.ip_user_files -ipstatic_source_dir I:/2-lab2/2-lab1/2-lab1.ip_user_files/ipstatic -lib_map_path [list {modelsim=I:/2-lab2/2-lab1/2-lab1.cache/compile_simlib/modelsim} {questa=I:/2-lab2/2-lab1/2-lab1.cache/compile_simlib/questa} {riviera=I:/2-lab2/2-lab1/2-lab1.cache/compile_simlib/riviera} {activehdl=I:/2-lab2/2-lab1/2-lab1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'H:/anzhuang3/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/BRAM2.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/rom1.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/sim/BRAM2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/sim/BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Bextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ForwardingControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwardingControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/I_Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I_Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Iextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Iextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Jextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Jextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/lab2/LatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Sextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Uextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/alu1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/iLatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iLatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mem_valid_sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_valid_sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcmux
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/stallControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stallControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/trans_addrCSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trans_addrCSR
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sim_1/imports/test_bench/Core_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: H:/anzhuang3/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto ed26c8f263834f1c8d087cca54f117a4 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v:86]
+WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 5 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v:185]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.pcmux
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.stallControl
+Compiling module xil_defaultlib.Iextend
+Compiling module xil_defaultlib.Sextend
+Compiling module xil_defaultlib.Bextend
+Compiling module xil_defaultlib.Jextend
+Compiling module xil_defaultlib.Uextend
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.trans_addrCSR
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.forwardingControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.SCPU
+Compiling module xil_defaultlib.Cache
+Compiling module xil_defaultlib.mem_valid_sig
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.LatencyMemory
+Compiling module xil_defaultlib.I_Cache
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM2
+Compiling module xil_defaultlib.iLatencyMemory
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/xsim.dir/Core_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Apr  3 13:25:10 2022...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1050.867 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {I:/2-lab2/2-lab1/Core_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config I:/2-lab2/2-lab1/Core_tb_behav.wcfg
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module Core_tb.uut.LatencyMemory.Data.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module Core_tb.uut.iLatencyMemory.Instruction.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1066.152 ; gain = 15.285
+run 320 ns
+run 320 ns
+run 320 ns
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1126.621 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'H:/anzhuang3/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/BRAM2.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/rom1.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/sim/BRAM2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/sim/BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Bextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ForwardingControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwardingControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/I_Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I_Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Iextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Iextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Jextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Jextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/lab2/LatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Sextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Uextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/alu1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/iLatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iLatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mem_valid_sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_valid_sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcmux
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/stallControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stallControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/trans_addrCSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trans_addrCSR
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: H:/anzhuang3/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto ed26c8f263834f1c8d087cca54f117a4 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v:86]
+WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 5 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v:185]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.pcmux
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.stallControl
+Compiling module xil_defaultlib.Iextend
+Compiling module xil_defaultlib.Sextend
+Compiling module xil_defaultlib.Bextend
+Compiling module xil_defaultlib.Jextend
+Compiling module xil_defaultlib.Uextend
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.trans_addrCSR
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.forwardingControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.SCPU
+Compiling module xil_defaultlib.Cache
+Compiling module xil_defaultlib.mem_valid_sig
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.LatencyMemory
+Compiling module xil_defaultlib.I_Cache
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM2
+Compiling module xil_defaultlib.iLatencyMemory
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {I:/2-lab2/2-lab1/Core_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config I:/2-lab2/2-lab1/Core_tb_behav.wcfg
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module Core_tb.uut.LatencyMemory.Data.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module Core_tb.uut.iLatencyMemory.Instruction.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1126.621 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'H:/anzhuang3/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/BRAM2.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/rom1.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/sim/BRAM2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/sim/BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Bextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ForwardingControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwardingControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/I_Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I_Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Iextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Iextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Jextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Jextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/lab2/LatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Sextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Uextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/alu1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/iLatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iLatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mem_valid_sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_valid_sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcmux
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/stallControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stallControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/trans_addrCSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trans_addrCSR
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: H:/anzhuang3/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto ed26c8f263834f1c8d087cca54f117a4 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v:86]
+WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 5 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v:185]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.pcmux
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.stallControl
+Compiling module xil_defaultlib.Iextend
+Compiling module xil_defaultlib.Sextend
+Compiling module xil_defaultlib.Bextend
+Compiling module xil_defaultlib.Jextend
+Compiling module xil_defaultlib.Uextend
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.trans_addrCSR
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.forwardingControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.SCPU
+Compiling module xil_defaultlib.Cache
+Compiling module xil_defaultlib.mem_valid_sig
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.LatencyMemory
+Compiling module xil_defaultlib.I_Cache
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM2
+Compiling module xil_defaultlib.iLatencyMemory
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {I:/2-lab2/2-lab1/Core_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config I:/2-lab2/2-lab1/Core_tb_behav.wcfg
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module Core_tb.uut.LatencyMemory.Data.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module Core_tb.uut.iLatencyMemory.Instruction.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1126.621 ; gain = 0.000
+run all
+save_wave_config {I:/2-lab2/2-lab1/Core_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'H:/anzhuang3/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/BRAM2.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/rom1.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/sim/BRAM2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/sim/BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Bextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ForwardingControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwardingControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/I_Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I_Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Iextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Iextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Jextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Jextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/lab2/LatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Sextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Uextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/alu1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/iLatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iLatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mem_valid_sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_valid_sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcmux
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/stallControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stallControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/trans_addrCSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trans_addrCSR
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: H:/anzhuang3/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto ed26c8f263834f1c8d087cca54f117a4 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v:86]
+WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 5 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v:185]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.pcmux
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.stallControl
+Compiling module xil_defaultlib.Iextend
+Compiling module xil_defaultlib.Sextend
+Compiling module xil_defaultlib.Bextend
+Compiling module xil_defaultlib.Jextend
+Compiling module xil_defaultlib.Uextend
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.trans_addrCSR
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.forwardingControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.SCPU
+Compiling module xil_defaultlib.Cache
+Compiling module xil_defaultlib.mem_valid_sig
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.LatencyMemory
+Compiling module xil_defaultlib.I_Cache
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM2
+Compiling module xil_defaultlib.iLatencyMemory
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {I:/2-lab2/2-lab1/Core_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config I:/2-lab2/2-lab1/Core_tb_behav.wcfg
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module Core_tb.uut.LatencyMemory.Data.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module Core_tb.uut.iLatencyMemory.Instruction.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 1134.570 ; gain = 0.922
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'H:/anzhuang3/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/BRAM2.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/rom1.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/sim/BRAM2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/sim/BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Bextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ForwardingControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwardingControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/I_Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I_Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Iextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Iextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Jextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Jextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/lab2/LatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Sextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Uextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/alu1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/iLatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iLatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mem_valid_sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_valid_sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcmux
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/stallControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stallControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/trans_addrCSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trans_addrCSR
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: H:/anzhuang3/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto ed26c8f263834f1c8d087cca54f117a4 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v:86]
+WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 5 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v:185]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.pcmux
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.stallControl
+Compiling module xil_defaultlib.Iextend
+Compiling module xil_defaultlib.Sextend
+Compiling module xil_defaultlib.Bextend
+Compiling module xil_defaultlib.Jextend
+Compiling module xil_defaultlib.Uextend
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.trans_addrCSR
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.forwardingControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.SCPU
+Compiling module xil_defaultlib.Cache
+Compiling module xil_defaultlib.mem_valid_sig
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.LatencyMemory
+Compiling module xil_defaultlib.I_Cache
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM2
+Compiling module xil_defaultlib.iLatencyMemory
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Block Memory Generator module Core_tb.uut.LatencyMemory.Data.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module Core_tb.uut.iLatencyMemory.Instruction.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1138.668 ; gain = 0.000
+run all
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Use_RSTA_Pin {false}] [get_ips BRAM]
+generate_target all [get_files  I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/BRAM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'BRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'BRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'BRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'BRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'BRAM'...
+catch { config_ip_cache -export [get_ips -all BRAM] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP BRAM, cache-ID = b11a84633031450f; cache size = 6.124 MB.
+catch { [ delete_ip_run [get_ips -all BRAM] ] }
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory I:/2-lab2/2-lab1/2-lab1.runs/BRAM_synth_1
+
+INFO: [Project 1-386] Moving file 'I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/BRAM.xci' from fileset 'BRAM' to fileset 'sources_1'.
+delete_fileset: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1184.906 ; gain = 0.000
+delete_ip_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1184.906 ; gain = 0.000
+export_ip_user_files -of_objects [get_files I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/BRAM.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/BRAM.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/BRAM.xci'
+export_simulation -of_objects [get_files I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/BRAM.xci] -directory I:/2-lab2/2-lab1/2-lab1.ip_user_files/sim_scripts -ip_user_files_dir I:/2-lab2/2-lab1/2-lab1.ip_user_files -ipstatic_source_dir I:/2-lab2/2-lab1/2-lab1.ip_user_files/ipstatic -lib_map_path [list {modelsim=I:/2-lab2/2-lab1/2-lab1.cache/compile_simlib/modelsim} {questa=I:/2-lab2/2-lab1/2-lab1.cache/compile_simlib/questa} {riviera=I:/2-lab2/2-lab1/2-lab1.cache/compile_simlib/riviera} {activehdl=I:/2-lab2/2-lab1/2-lab1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+save_wave_config {I:/2-lab2/2-lab1/Core_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'H:/anzhuang3/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/BRAM2.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/rom1.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/sim/BRAM2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/sim/BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Bextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ForwardingControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwardingControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/I_Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I_Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Iextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Iextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Jextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Jextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/lab2/LatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Sextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Uextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/alu1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/iLatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iLatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mem_valid_sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_valid_sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcmux
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/stallControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stallControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/trans_addrCSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trans_addrCSR
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: H:/anzhuang3/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto ed26c8f263834f1c8d087cca54f117a4 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v:86]
+WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 5 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v:185]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.pcmux
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.stallControl
+Compiling module xil_defaultlib.Iextend
+Compiling module xil_defaultlib.Sextend
+Compiling module xil_defaultlib.Bextend
+Compiling module xil_defaultlib.Jextend
+Compiling module xil_defaultlib.Uextend
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.trans_addrCSR
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.forwardingControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.SCPU
+Compiling module xil_defaultlib.Cache
+Compiling module xil_defaultlib.mem_valid_sig
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.LatencyMemory
+Compiling module xil_defaultlib.I_Cache
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM2
+Compiling module xil_defaultlib.iLatencyMemory
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {I:/2-lab2/2-lab1/Core_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config I:/2-lab2/2-lab1/Core_tb_behav.wcfg
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module Core_tb.uut.LatencyMemory.Data.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module Core_tb.uut.iLatencyMemory.Instruction.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1188.199 ; gain = 0.000
+run all
+save_wave_config {I:/2-lab2/2-lab1/Core_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'H:/anzhuang3/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Core_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/BRAM2.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/rom1.mif'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/lab2.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [SIM-utils-43] Exported 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim/kernel.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj Core_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM2/sim/BRAM2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/ip/BRAM/sim/BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Bextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/CSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ForwardingControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwardingControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/I_Cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I_Cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Iextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Iextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Jextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Jextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/lab2/LatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Sextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/Uextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/alu1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/iLatencyMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iLatencyMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mem_valid_sig.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_valid_sig
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/mux3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pcmux
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/stallControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stallControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/new/trans_addrCSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trans_addrCSR
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: H:/anzhuang3/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto ed26c8f263834f1c8d087cca54f117a4 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Core_tb_behav xil_defaultlib.Core_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/Core.v:87]
+WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 5 for port debug_reg_addr [I:/2-lab2/2-lab1/2-lab1.srcs/sources_1/imports/src/SCPU.v:185]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.pcmux
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Regs
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.stallControl
+Compiling module xil_defaultlib.Iextend
+Compiling module xil_defaultlib.Sextend
+Compiling module xil_defaultlib.Bextend
+Compiling module xil_defaultlib.Jextend
+Compiling module xil_defaultlib.Uextend
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.mux2
+Compiling module xil_defaultlib.trans_addrCSR
+Compiling module xil_defaultlib.CSR
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.forwardingControl
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.SCPU
+Compiling module xil_defaultlib.Cache
+Compiling module xil_defaultlib.mem_valid_sig
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM
+Compiling module xil_defaultlib.LatencyMemory
+Compiling module xil_defaultlib.I_Cache
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.BRAM2
+Compiling module xil_defaultlib.iLatencyMemory
+Compiling module xil_defaultlib.Core
+Compiling module xil_defaultlib.Core_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Core_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'I:/2-lab2/2-lab1/2-lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Core_tb_behav -key {Behavioral:sim_1:Functional:Core_tb} -tclbatch {Core_tb.tcl} -view {I:/2-lab2/2-lab1/Core_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config I:/2-lab2/2-lab1/Core_tb_behav.wcfg
+source Core_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module Core_tb.uut.LatencyMemory.Data.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module Core_tb.uut.iLatencyMemory.Instruction.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Core_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1188.199 ; gain = 0.000
+run all
+save_wave_config {I:/2-lab2/2-lab1/Core_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Apr  3 14:56:05 2022...

@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Apr  3 19:27:14 2022
+# Process ID: 29408
+# Current directory: I:/2-lab2/2-lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24432 I:\2-lab2\2-lab1\2-lab1.xpr
+# Log file: I:/2-lab2/2-lab1/vivado.log
+# Journal file: I:/2-lab2/2-lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project I:/2-lab2/2-lab1/2-lab1.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+export_ip_user_files -of_objects  [get_files I:/2-lab2/2-lab1/build-simp/kernel.coe] -no_script -reset -force -quiet
+remove_files  I:/2-lab2/2-lab1/build-simp/kernel.coe
+export_ip_user_files -of_objects  [get_files I:/computer_system/sys3/build/kernel.coe] -no_script -reset -force -quiet
+remove_files  I:/computer_system/sys3/build/kernel.coe
+export_ip_user_files -of_objects  [get_files I:/computer_system/sys3/lab0/build/kernel.coe] -no_script -reset -force -quiet
+remove_files  I:/computer_system/sys3/lab0/build/kernel.coe
+export_ip_user_files -of_objects  [get_files I:/computer_system/sys3/sys3lab-2022-stu/src/lab2/lab2.coe] -no_script -reset -force -quiet
+remove_files  I:/computer_system/sys3/sys3lab-2022-stu/src/lab2/lab2.coe
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
